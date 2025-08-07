@@ -1,0 +1,350 @@
+:active,
+:hover,
+:focus {
+  outline: 0 !important;
+  outline-offset: 0;
+}
+:root {
+  --yellow: #ffc222;
+  --green: #00a149;
+  --white: #fff;
+  --text-color: #b0b0b0;
+  --black: #1e1d23;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-size: 100%;
+  font-weight: 400;
+}
+/* ===============================
+        Custom Scrollbar
+================================ */
+::-webkit-scrollbar {
+  width: 0.625rem;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--green);
+}
+h1 {
+  font-size: 58px;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  color: var(--white);
+  text-shadow: 1px 0 6px #000;
+}
+h1 span {
+  color: var(--yellow);
+}
+h2 {
+  font-weight: 700;
+  font-size: 2rem;
+  text-transform: capitalize;
+  color: var(--green);
+  line-height: 3rem;
+}
+h4 {
+  color: var(--green);
+  text-transform: capitalize;
+  font-size: 1.125rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+h5 {
+  color: var(--black);
+  text-transform: capitalize;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+p {
+  font-size: 1rem;
+  color: var(--text-color);
+  font-weight: 400;
+  line-height: 1.75rem;
+  letter-spacing: 1px;
+}
+.main-btn {
+  display: inline-block;
+  padding: 0.625rem 1.875rem;
+  text-decoration: none;
+  line-height: 1.5625rem;
+  background-color: var(--yellow);
+  border: 0.1875rem solid var(--yellow);
+  color: var(--black);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  border-radius: 0.5rem;
+  box-shadow: 0p 2px 10px -1px rgb(0 0 0/19%);
+  transition: 0.4s ease-out 0s;
+}
+.main-btn:hover {
+  background-color: transparent;
+  color: var(--yellow);
+}
+.wrapper {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+/*================= 
+    Header Design
+=================*/
+.navigation-wrap {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+  padding: 0.3rem 0;
+}
+.navigation-wrap .nav-item {
+  padding: 0 0.625rem;
+  transition: 0.3s linear;
+}
+.nav-link {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: var(--white);
+  letter-spacing: 1;
+}
+.nav-link:hover,
+.nav-link.active {
+  color: var(--yellow) !important;
+}
+.navigation-wrap .main-btn {
+  padding: 0.3125rem 1.4375rem;
+  box-shadow: none;
+  margin-left: 0.625rem;
+}
+/*============================
+    Top-banner Design
+==============================*/
+.top-banner {
+  width: 100%;
+  background-image: url(images/bg/bg-1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 16.875rem 0 9.375rem;
+}
+.top-banner p {
+  color: var(--white);
+}
+
+/*===================== 
+    Our-menu Design
+======================*/
+
+.our-menu .card {
+  border: none;
+}
+.our-menu .link_category_product {
+  position: relative;
+  display: block;
+  z-index: 1;
+}
+.our-menu .link_category_product::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 100%;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  border: 2px dotted var(--green);
+  z-index: -1;
+  background-color: var(--yellow);
+  transition: 0.4s ease;
+}
+.card:hover .link_category_product::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+.our-menu .cat-title a {
+  text-align: center;
+  font-size: 0.8125rem;
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--black);
+}
+.card:hover .cat-title a {
+  color: var(--yellow);
+}
+
+/*========================= 
+    About-section Design
+==========================*/
+.about-section {
+  background-color: var(--black);
+}
+.about-section .card,
+.about-section .card img {
+  border-radius: 0.625rem;
+}
+.about-section .text-sec {
+  padding-left: 2rem;
+}
+.team-img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/*==========================
+  Food type section Design
+============================*/
+.food-type {
+  padding: 3.2rem;
+}
+.food-type ul li {
+  font-size: 1rem;
+  color: var(--text-color);
+  line-height: 32px;
+  position: relative;
+  margin-top: 30px;
+}
+.food-type ul li::before {
+  position: absolute;
+  left: -2.1875rem;
+  color: var(--yellow);
+  font-size: 1.25rem;
+  content: "\f00c";
+  font-family: "Font Awesome 5 Free";
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: 900;
+}
+
+/*============================== 
+  Explore food section Design
+===============================*/
+.explore-food .card {
+  border: none;
+  background-color: transparent;
+  border-radius: 0.9375rem;
+}
+.explore-food .card img {
+  border-radius: 15px 15px 0px 0px;
+  object-fit: cover;
+}
+.explore-food .card span {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--yellow);
+  padding-bottom: 1rem;
+  border-bottom: 0.0625rem solid #eee;
+}
+.explore-food .card p {
+  /* color: var(--text-color); */
+  font-size: 14px;
+  line-height: 22px;
+}
+
+/*============================= 
+  Testimonial section Design
+==============================*/
+.testimonial-section {
+  background: var(--green);
+  height: fit-content;
+}
+.testimonial-section h2 {
+  color: var(--white);
+}
+.testimonial-section .carousel-item {
+  margin-top: 3rem;
+  padding: 10rem 3.125rem;
+  background-color: var(--black);
+  border-radius: 0.9375rem;
+}
+.carousel-caption img {
+  max-width: 5rem;
+  border-radius: 50%;
+  padding: 0.3125rem;
+}
+.carousel-caption p {
+  font-size: 1.125rem;
+  line-height: 1.5625rem;
+  font-weight: 300;
+  color: var(--white);
+  padding: 0 11% 0.625rem;
+}
+.carousel-indicators button {
+  width: 15px !important;
+  height: 15px !important;
+  border-radius: 50%;
+  margin-right: 1rem;
+  opacity: 0.2;
+}
+.carousel-indicators button.active {
+  opacity: 1;
+}
+.testimonial-section .carousel-indicators {
+  bottom: -3rem !important;
+}
+
+
+/*============== 
+  Footer Style
+==============*/
+.footer {
+  background-color: var(--black);
+}
+.footer-social a i {
+  font-size: 1.5rem;
+  color: var(--white);
+  padding: 0.1rem;
+}
+.footer-social a:hover i {
+  color: var(--yellow);
+}
+.newsletter .form-control {
+  height: 3.225rem;
+  padding: 0 1.25rem;
+  font-size: 0.875rem;
+  width: 100%;
+  border-radius: 0;
+  background-color: transparent;
+  border: 0.1875rem solid var(--white);
+  font-weight: 700;
+}
+.newsletter .form-control::placeholder{
+  color: rgba(255, 255, 255, 0.5);
+}
+.newsletter .main-btn {
+  height: 3.225rem;
+  padding: 0 1.25rem;
+  font-size: 0.875rem;
+  border-radius: 0;
+  background-color: var(--white);
+  border: 0.1875rem solid var(--white);
+  color: var(--black);
+  font-weight: 700;
+}
+.newsletter:hover .form-control {
+  border: 0.1875rem solid var(--yellow);
+  color: var(--black);
+}
+.newsletter:hover .main-btn {
+  background-color: var(--yellow);
+  border: 0.1875rem solid var(--yellow);
+}
+.newsletter .form-control:focus,
+.newsletter .form-control:hover {
+  outline: none;
+  box-shadow: none;
+  border-color: var(--yellow);
+  color: var(--white);
+}
